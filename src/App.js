@@ -12,13 +12,13 @@ import { fetchData } from './actions/apiActions';
 
 function App() {
 
-  const { loading, data, err } = useSelector(state => state.api);
+  const { data} = useSelector(state => state.api);
   console.log(data);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchData());
-  }, [])
+  }, [dispatch])
 
 
 
