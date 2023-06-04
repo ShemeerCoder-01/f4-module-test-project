@@ -1,0 +1,96 @@
+.heading{
+    border-bottom: 1px solid white;
+    padding: 1rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.grid-item{
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+.images{
+    width: 250px;
+    height: 250px;
+}
+
+
+@media screen and (max-width:990px) {
+    .heading{
+        border-bottom: 1px solid white;
+        padding: 1rem;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3,300px);
+        gap: 0.5rem;
+        margin: 0.5rem;
+    }
+    
+    .grid-item{
+        padding: 0.5rem;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+    }
+    .images{
+        width: 250px;
+        height: 200px;
+    }
+    
+    
+}
+
+@media screen and (max-width:770px) {
+    .heading{
+        border-bottom: 1px solid white;
+        padding: 1rem;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(5,150px);
+        gap: 0.5rem;
+        margin: 0.5rem;
+    }
+    
+    .grid-item{
+        padding: 0.3rem;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+    }
+    .images{
+        width: 100px;
+        height: 80px;
+    }
+    
+    
+}
+
+@media screen and (max-width:570px) {
+    .heading{
+        border-bottom: 1px solid white;
+        padding: 1rem;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(5,100px);
+        gap: 0.5rem;
+        margin: 0.5rem;
+    }
+    
+    .grid-item{
+        padding: 0.2rem;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+    }
+    .images{
+        width: 70px;
+        height: 60px;
+    }
+    
+    
+}

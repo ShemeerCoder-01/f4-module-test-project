@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import HomePage from './components/HomePage';
+import DisplayPage from './components/DisplayPage';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from './actions/apiActions';
+
+
+
+
+
 
 function App() {
+
+  const { loading, data, err } = useSelector(state => state.api);
+  console.log(data);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage data={data} />} />
+        <Route path="/displaypage/:id" element={<DisplayPage data={data} />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
 export default App;
